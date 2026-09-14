@@ -1,4 +1,4 @@
-package com.arun.Employee.Management.Main;
+package com.arun.Employee.Management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
