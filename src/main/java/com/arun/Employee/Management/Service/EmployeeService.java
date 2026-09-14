@@ -5,6 +5,7 @@ import com.arun.Employee.Management.Model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeService {
@@ -29,5 +30,13 @@ public class EmployeeService {
     }
     public List<Employee> getAllEmployee(){
         return dao.findAll();
+    }
+
+    public List<Employee> getEmployeesByDept(String department) {
+        return dao.findAll().stream().filter(e -> e.getDepartment().equals(department)).collect(Collectors.toList());
+    }
+
+    public List<Employee> getEmployeesByMinSalary(int min) {
+        return dao.findAll().stream().filter(e -> e.getSalary() > min).collect(Collectors.toList());
     }
 }

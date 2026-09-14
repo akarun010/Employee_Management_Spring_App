@@ -23,6 +23,16 @@ public class EmployeeController {
         return service.getEmployeeById(id);
     }
 
+    @GetMapping("/employees/department/{department}")
+    public List<Employee> getEmployeeByDept(@PathVariable String department){
+        return service.getEmployeesByDept(department);
+    }
+
+    @GetMapping("/employees/salary")
+    public List<Employee> getEmployeesByMinSalary(@RequestParam int min){
+        return service.getEmployeesByMinSalary(min);
+    }
+
     @PostMapping("/employees")
     public void addEmployee(@RequestBody Employee employee){
         service.addEmployee(employee);
