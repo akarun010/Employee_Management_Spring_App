@@ -3,7 +3,6 @@ package com.arun.Employee.Management.Controller;
 import com.arun.Employee.Management.Model.Employee;
 import com.arun.Employee.Management.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

@@ -2,9 +2,16 @@ package com.arun.Employee.Management.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import org.jspecify.annotations.Nullable;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
 
 @Entity
-public class Employee {
+public class Employee implements UserDetails {
     @Id
     private int id;
     private String name;
@@ -72,5 +79,20 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+    }
+
+    @Override
+    public @Nullable String getPassword() {
+        return email;
+    }
+
+    @Override
+    public String getUsername() {
+        return name;
     }
 }
