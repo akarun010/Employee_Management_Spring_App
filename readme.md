@@ -10,7 +10,7 @@ A Spring Boot REST API for managing employee information using **Spring Data JPA
 * Update employee details
 * Delete employees
 * Find employees by department
-* Find employees based on minimum salary
+* Find employees based on minimum salary 
 * MySQL database integration
 * RESTful API architecture
 * Layered architecture using Controller, Service, and Repository
