@@ -2,7 +2,7 @@
 
 A Spring Boot REST API for managing employee information using **Spring Data JPA, MySQL, and RESTful web services**.
 
-## 🚀 Features
+## 🚀 Features 
 
 * Create employees
 * View all employees
