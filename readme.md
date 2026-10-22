@@ -8,7 +8,7 @@ A Spring Boot REST API for managing employee information using **Spring Data JPA
 * View all employees
 * View an employee by ID
 * Update employee details
-* Delete employees
+* Delete employees  
 * Find employees by department
 * Find employees based on minimum salary 
 * MySQL database integration
