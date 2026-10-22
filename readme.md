@@ -15,7 +15,7 @@ A Spring Boot REST API for managing employee information using **Spring Data JPA
 * RESTful API architecture
 * Layered architecture using Controller, Service, and Repository
 
-## 🛠️ Technologies Used
+## 🛠️ Technologies Used 
 
 * Java
 * Spring Boot
